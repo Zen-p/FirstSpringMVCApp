@@ -9,10 +9,9 @@ public class TestSpring {
         );
         Music music = context.getBean("musicBean", ClassicalMusic.class);
 
-        MusicPlayer mp = new MusicPlayer(music);
-        mp.playMusic();
+        MusicPlayer musicPlayer = context.getBean("musicPlayerBean", MusicPlayer.class);
 
-        System.out.println(music.getSong());
+        musicPlayer.playMusic();
 
         context.close();
 

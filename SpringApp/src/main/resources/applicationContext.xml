@@ -10,5 +10,9 @@
     <bean id="musicBean"
           class="com.springapp.ClassicalMusic">
     </bean>
+    <bean id="musicPlayerBean"
+    class="com.springapp.MusicPlayer">
+          <constructor-arg ref="musicBean"></constructor-arg>
+    </bean>
 
 </beans>
